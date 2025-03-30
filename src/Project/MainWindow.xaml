@@ -1,12 +1,15 @@
 ﻿<Window x:Class="Project.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Project"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="GoodMovies" Height="500" Width="900" Background="#1E1E1E" Foreground="White">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="GoodMovies - Twoja lista filmów" FontSize="24" FontWeight="Bold" Padding="10" HorizontalAlignment="Center"/>
+        
+        <Frame Grid.Row="1" Source="Views/MovieListView.xaml" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

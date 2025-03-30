@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Grzegorz\RiderProjects\GoodMovies\src\Project\obj\Debug\net8.0-windows\
+E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\
 Project
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Grzegorz\RiderProjects\GoodMovies\src\Project\App.xaml
-11407045341
+E:\GitHub\GoodMovies\src\Project\App.xaml
+4-575138963
 
-4-1780633789
+15-1310684244
 198-688555687
-MainWindow.xaml;
+MainWindow.xaml;Views\AddMovieView.xaml;Views\MovieDetailsView.xaml;Views\MovieListView.xaml;
 
-True
+False
 
