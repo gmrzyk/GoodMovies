@@ -1,15 +1,38 @@
 ﻿<Window x:Class="Project.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="GoodMovies" Height="500" Width="900" Background="#1E1E1E" Foreground="White">
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project"
+        xmlns:views="clr-namespace:Project.Views"
+        xmlns:userControls="clr-namespace:Project.UserControls"
+        xmlns:viewModels="clr-namespace:Project.ViewModels"
+        mc:Ignorable="d"
+        Title="GoodMovies" Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
-        <TextBlock Text="GoodMovies - Twoja lista filmów" FontSize="24" FontWeight="Bold" Padding="10" HorizontalAlignment="Center"/>
+        <userControls:Sidebar Grid.Column="0"/>
         
-        <Frame Grid.Row="1" Source="Views/MovieListView.xaml" NavigationUIVisibility="Hidden"/>
+        <ContentControl Grid.Column="1" Content="{Binding CurrentViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewModels:MovieListViewModel}">
+                    <views:MovieListView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:MovieCollectionViewModel}">
+                    <views:MovieCollectionView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:MovieDetailsViewModel}">
+                    <views:MovieDetailsView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:StatisticsViewModel}">
+                    <views:StatisticsView/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
     </Grid>
 </Window>

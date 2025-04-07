@@ -1,18 +1,72 @@
 using System.Collections.Generic;
+using System.Linq;
 using Project.Models;
 
 namespace Project.Services
 {
-    public static class MovieService
+    public class MovieService
     {
-        public static List<Movie> GetSampleMovies()
+        private readonly List<UserMovie> _favorites = new();
+        private readonly List<UserMovie> _watched = new();
+        private readonly List<UserMovie> _toWatch = new();
+
+        public void AddToFavorites(Movie movie)
         {
-            return new List<Movie>
+            if (!_favorites.Any(m => m.Title == movie.Title))
             {
-                new Movie { Title = "Incepcja", Genre = "Sci-Fi", Director = "Christopher Nolan", Year = 2010, Rating = 8.8 },
-                new Movie { Title = "Interstellar", Genre = "Sci-Fi", Director = "Christopher Nolan", Year = 2014, Rating = 8.6 },
-                new Movie { Title = "Fight Club", Genre = "Dramat", Director = "David Fincher", Year = 1999, Rating = 8.8 }
-            };
+                _favorites.Add(new UserMovie(movie) { IsFavorite = true });
+            }
+        }
+
+        public void AddToWatched(Movie movie)
+        {
+            if (!_watched.Any(m => m.Title == movie.Title))
+            {
+                _watched.Add(new UserMovie(movie) { IsWatched = true });
+            }
+        }
+
+        public void AddToWatchList(Movie movie)
+        {
+            if (!_toWatch.Any(m => m.Title == movie.Title))
+            {
+                _toWatch.Add(new UserMovie(movie) { ToWatch = true });
+            }
+        }
+
+        public List<UserMovie> GetFavorites() => _favorites;
+        public List<UserMovie> GetWatched() => _watched;
+        public List<UserMovie> GetWatchList() => _toWatch;
+
+        public void MoveToWatched(UserMovie movie)
+        {
+            if (!_watched.Contains(movie))
+            {
+                _watched.Add(movie);
+            }
+            movie.IsWatched = true;
+            movie.ToWatch = false;
+            movie.IsFavorite = false;
+            _toWatch.Remove(movie);
+            _favorites.Remove(movie);
+        }
+
+        public void RemoveFromFavorites(UserMovie movie)
+        {
+            _favorites.Remove(movie);
+            movie.IsFavorite = false;
+        }
+
+        public void RemoveFromWatched(UserMovie movie)
+        {
+            _watched.Remove(movie);
+            movie.IsWatched = false;
+        }
+
+        public void RemoveFromWatchList(UserMovie movie)
+        {
+            _toWatch.Remove(movie);
+            movie.ToWatch = false;
         }
     }
 }

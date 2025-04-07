@@ -1,11 +1,12 @@
 using System.Windows.Controls;
 
-namespace Project.Views;
-
-public partial class MovieDetailsView : UserControl
+namespace Project.Views
 {
-    public MovieDetailsView()
+    public partial class MovieDetailsView : UserControl
     {
-        InitializeComponent();
+        public MovieDetailsView()
+        {
+            InitializeComponent();
+        }
     }
 }

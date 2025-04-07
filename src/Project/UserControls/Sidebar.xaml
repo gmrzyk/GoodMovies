@@ -1,0 +1,43 @@
+<UserControl x:Class="Project.UserControls.Sidebar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="200">
+    <Border Background="{StaticResource SidebarBackground}" Padding="10">
+        <StackPanel>
+            <TextBlock Text="GoodMovies" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="White" 
+                       Margin="0 0 0 20"
+                       HorizontalAlignment="Center"/>
+            
+            <Button Content="🎬 Wszystkie filmy" 
+                    Command="{Binding NavigateToCollectionCommand}"
+                    CommandParameter="All"
+                    Style="{StaticResource SidebarButtonStyle}"/>
+            
+            <Button Content="❤️ Ulubione" 
+                    Command="{Binding NavigateToCollectionCommand}"
+                    CommandParameter="Favorites"
+                    Style="{StaticResource SidebarButtonStyle}"/>
+            
+            <Button Content="✔️ Obejrzane" 
+                    Command="{Binding NavigateToCollectionCommand}"
+                    CommandParameter="Watched"
+                    Style="{StaticResource SidebarButtonStyle}"/>
+            
+            <Button Content="➕ Do obejrzenia" 
+                    Command="{Binding NavigateToCollectionCommand}"
+                    CommandParameter="ToWatch"
+                    Style="{StaticResource SidebarButtonStyle}"/>
+            
+            <Button Content="📊 Statystyki" 
+                    Command="{Binding NavigateToCollectionCommand}"
+                    CommandParameter="Statistics"
+                    Style="{StaticResource SidebarButtonStyle}"/>
+        </StackPanel>
+    </Border>
+</UserControl>

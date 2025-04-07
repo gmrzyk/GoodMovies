@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 E:\GitHub\GoodMovies\src\Project\App.xaml
-4-575138963
+7755306090
 
-15-1310684244
-198-688555687
-MainWindow.xaml;Views\AddMovieView.xaml;Views\MovieDetailsView.xaml;Views\MovieListView.xaml;
+23285456714
+226-1133470841
+MainWindow.xaml;UserControls\Sidebar.xaml;Views\MovieCollectionView.xaml;Views\MovieDetailsView.xaml;Views\MovieListView.xaml;Views\StatisticsView.xaml;Views\Styles.xaml;
 
 False
 
