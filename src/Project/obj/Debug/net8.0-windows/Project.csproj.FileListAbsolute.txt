@@ -68,3 +68,7 @@ E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\App.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\Styles.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Project.csproj.CopyComplete
 E:\GitHub\GoodMovies\src\Project\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+E:\GitHub\GoodMovies\src\Project\bin\Debug\net8.0-windows\LiveCharts.dll
+E:\GitHub\GoodMovies\src\Project\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
+E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\StatisticsView.baml
+E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\StatisticsView.g.cs

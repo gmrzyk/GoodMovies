@@ -13,6 +13,9 @@ namespace Project.Models
             PosterUrl = movie.PosterUrl;
             Genre = movie.Genre;
             Rating = movie.Rating;
+            IsFavorite = false;
+            IsWatched = false;
+            ToWatch = false;
         }
 
         public bool IsFavorite { get; set; }

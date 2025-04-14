@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         xmlns:views="clr-namespace:Project.Views"
-        xmlns:userControls="clr-namespace:Project.UserControls"
         xmlns:viewModels="clr-namespace:Project.ViewModels"
+        xmlns:userControls="clr-namespace:Project.UserControls"
         mc:Ignorable="d"
         Title="GoodMovies" Height="800" Width="1200"
         WindowStartupLocation="CenterScreen">
@@ -28,6 +28,9 @@
                 </DataTemplate>
                 <DataTemplate DataType="{x:Type viewModels:MovieDetailsViewModel}">
                     <views:MovieDetailsView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewModels:StatisticsViewModel}">
+                    <views:StatisticsView/>
                 </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>

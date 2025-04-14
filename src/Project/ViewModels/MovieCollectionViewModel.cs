@@ -98,13 +98,15 @@ namespace Project.ViewModels
             _movieService.MoveToWatched(movie);
             _allMovies.Remove(movie);
             FilterMovies();
-            MessageBox.Show($"Przeniesiono {movie.Title} do obejrzanych!");
+            MessageBox.Show($"Przeniesiono '{movie.Title}' do obejrzanych!");
         }
 
         private void AddToFavorites(UserMovie movie)
         {
             _movieService.AddToFavorites(movie);
-            MessageBox.Show($"Dodano {movie.Title} do ulubionych!");
+            if (!_allMovies.Contains(movie)) _allMovies.Add(movie);
+            FilterMovies();
+            MessageBox.Show($"Dodano '{movie.Title}' do ulubionych i oznaczono jako obejrzany!");
         }
 
         private void RemoveFromWatched(UserMovie movie)
@@ -112,7 +114,7 @@ namespace Project.ViewModels
             _movieService.RemoveFromWatched(movie);
             _allMovies.Remove(movie);
             FilterMovies();
-            MessageBox.Show($"Usunięto {movie.Title} z obejrzanych!");
+            MessageBox.Show($"Usunięto '{movie.Title}' z obejrzanych (i z ulubionych, jeśli był)!");
         }
 
         private void RemoveFromFavorites(UserMovie movie)
@@ -120,7 +122,7 @@ namespace Project.ViewModels
             _movieService.RemoveFromFavorites(movie);
             _allMovies.Remove(movie);
             FilterMovies();
-            MessageBox.Show($"Usunięto {movie.Title} z ulubionych!");
+            MessageBox.Show($"Usunięto '{movie.Title}' z ulubionych!");
         }
 
         private void ShowMovieDetails(UserMovie movie)

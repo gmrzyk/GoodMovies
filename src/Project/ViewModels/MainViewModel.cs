@@ -28,6 +28,10 @@ namespace Project.ViewModels
             {
                 _navigationService.NavigateTo<MovieListViewModel>();
             }
+            else if (collectionType == "Statistics")
+            {
+                _navigationService.NavigateTo<StatisticsViewModel>();
+            }
             else
             {
                 _navigationService.NavigateTo<MovieCollectionViewModel>(collectionType);

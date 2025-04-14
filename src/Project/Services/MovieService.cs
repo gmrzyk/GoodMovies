@@ -24,6 +24,7 @@ namespace Project.Services
                 _userMovies.Add(userMovie);
             }
             userMovie.IsFavorite = true;
+            userMovie.IsWatched = true;
             SaveChanges();
         }
 
@@ -52,7 +53,7 @@ namespace Project.Services
         }
 
         public List<UserMovie> GetFavorites() => 
-            _userMovies.Where(m => m.IsFavorite).ToList();
+            _userMovies.Where(m => m.IsFavorite && m.IsWatched).ToList();
 
         public List<UserMovie> GetWatched() => 
             _userMovies.Where(m => m.IsWatched).ToList();
@@ -76,6 +77,7 @@ namespace Project.Services
         public void RemoveFromWatched(UserMovie movie)
         {
             movie.IsWatched = false;
+            movie.IsFavorite = false;
             SaveChanges();
         }
 

@@ -24,8 +24,8 @@
     "Rating": 8.7
   },
   {
-    "IsFavorite": true,
-    "IsWatched": true,
+    "IsFavorite": false,
+    "IsWatched": false,
     "ToWatch": false,
     "Title": "Skazani na Shawshank",
     "Director": "Frank Darabont",
@@ -46,5 +46,77 @@
     "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
     "Genre": "Kryminał",
     "Rating": 8.9
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": true,
+    "ToWatch": false,
+    "Title": "Whiplash",
+    "Director": "Damien Chazelle",
+    "Year": 2014,
+    "Description": "Młody perkusista stara się osiągnąć doskonałość pod okiem bezwzględnego nauczyciela.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.5
+  },
+  {
+    "IsFavorite": true,
+    "IsWatched": true,
+    "ToWatch": false,
+    "Title": "Avengers: Wojna bez granic",
+    "Director": "Anthony Russo, Joe Russo",
+    "Year": 2018,
+    "Description": "Avengerzy i ich sojusznicy muszą być gotowi poświęcić wszystko, aby pokonać potężnego Thanosa.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 8.4
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": true,
+    "ToWatch": false,
+    "Title": "Czarna Pantera",
+    "Director": "Ryan Coogler",
+    "Year": 2018,
+    "Description": "T'Challa, król Wakandy, wraca do domu by objąć tron, ale musi stawić czoła dawnemu wrogowi.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 7.3
+  },
+  {
+    "IsFavorite": true,
+    "IsWatched": true,
+    "ToWatch": false,
+    "Title": "Bohemian Rhapsody",
+    "Director": "Bryan Singer",
+    "Year": 2018,
+    "Description": "Historia zespołu Queen, skupiająca się na ich wokaliscie Freddiem Mercurym i ich drodze do sukcesu.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Biograficzny",
+    "Rating": 7.9
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": false,
+    "ToWatch": true,
+    "Title": "Mad Max: Na drodze gniewu",
+    "Director": "George Miller",
+    "Year": 2015,
+    "Description": "W postapokaliptycznej przyszłości Max łączy siły z buntowniczką Furiosą, aby uciec przed tyranem Immortanem Joem.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 8.1
+  },
+  {
+    "IsFavorite": true,
+    "IsWatched": false,
+    "ToWatch": false,
+    "Title": "Gravity",
+    "Director": "Alfonso Cuarón",
+    "Year": 2013,
+    "Description": "Dwoje astronautów zostaje odciętych od promu kosmicznego po zniszczeniu ich stacji przez kosmiczne śmieci.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 7.7
   }
 ]

@@ -14,6 +14,8 @@
                        Margin="0 0 0 20"
                        HorizontalAlignment="Center"/>
             
+            
+            
             <Button Content="🎬 Wszystkie filmy" 
                     Command="{Binding NavigateToCollectionCommand}"
                     CommandParameter="All"
@@ -32,6 +34,11 @@
             <Button Content="➕ Do obejrzenia" 
                     Command="{Binding NavigateToCollectionCommand}"
                     CommandParameter="ToWatch"
+                    Style="{StaticResource SidebarButtonStyle}"/>
+            
+            <Button Content="📊 Statystyki" 
+                    Command="{Binding NavigateToCollectionCommand}"
+                    CommandParameter="Statistics"
                     Style="{StaticResource SidebarButtonStyle}"/>
         </StackPanel>
     </Border>

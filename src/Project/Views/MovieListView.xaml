@@ -75,7 +75,8 @@
                                             Command="{Binding DataContext.AddToFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource ActionButtonStyle}"
-                                            Margin="0 0 0 10"/>
+                                            Margin="0 0 0 10"
+                                            ToolTip="Dodaje do ulubionych i automatycznie oznacza jako obejrzany"/>
                                     
                                     <Button Content="✔️ Obejrzane" 
                                             Command="{Binding DataContext.AddToWatchedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"

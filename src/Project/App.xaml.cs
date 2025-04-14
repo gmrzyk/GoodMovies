@@ -31,12 +31,13 @@ namespace Project
             services.AddSingleton<JsonDataService>();
             services.AddSingleton<MovieService>();
             services.AddSingleton<NavigationService>();
-            
+    
             services.AddTransient<MainViewModel>();
             services.AddTransient<MovieListViewModel>();
             services.AddTransient<MovieCollectionViewModel>();
             services.AddTransient<MovieDetailsViewModel>();
-
+            services.AddTransient<StatisticsViewModel>();
+    
             services.AddSingleton<MainWindow>();
         }
     }

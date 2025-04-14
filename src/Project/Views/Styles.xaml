@@ -132,4 +132,26 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <Style x:Key="MaterialDesignProgressBar" TargetType="ProgressBar">
+        <Setter Property="Background" Value="#EEEEEE"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <Grid>
+                        <Border x:Name="PART_Track" 
+                                CornerRadius="4" 
+                                Background="{TemplateBinding Background}"/>
+                        <Border x:Name="PART_Indicator" 
+                                CornerRadius="4" 
+                                Background="{TemplateBinding Foreground}"
+                                HorizontalAlignment="Left"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
 </ResourceDictionary>
