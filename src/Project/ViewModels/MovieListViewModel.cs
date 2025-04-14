@@ -1,4 +1,6 @@
+using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Project.Models;
@@ -11,9 +13,21 @@ namespace Project.ViewModels
     {
         private readonly MovieService _movieService;
         private readonly NavigationService _navigationService;
-        
+        private string _searchQuery;
+        private ObservableCollection<Movie> _allMovies = new ObservableCollection<Movie>();
+
         public ObservableCollection<Movie> Movies { get; } = new ObservableCollection<Movie>();
         
+        public string SearchQuery
+        {
+            get => _searchQuery;
+            set
+            {
+                SetField(ref _searchQuery, value);
+                FilterMovies();
+            }
+        }
+
         public ICommand AddToFavoritesCommand { get; }
         public ICommand AddToWatchedCommand { get; }
         public ICommand AddToWatchListCommand { get; }
@@ -34,43 +48,23 @@ namespace Project.ViewModels
 
         private void LoadMovies()
         {
-            Movies.Clear();
-            
-            var sampleMovies = new List<Movie>
-            {
-                new Movie 
-                {
-                    Title = "Incepcja",
-                    Director = "Christopher Nolan", 
-                    Year = 2010,
-                    Description = "Złodziej, który potrafi wykradać sekrety z podświadomości podczas snu.",
-                    PosterUrl = "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
-                    Genre = "Sci-Fi",
-                    Rating = 8.8 
-                },
-                new Movie 
-                {
-                    Title = "Matrix",
-                    Director = "Lana i Lilly Wachowski", 
-                    Year = 1999,
-                    Description = "Haker komputerowy dowiaduje się od tajemniczych rebeliantów o prawdziwej naturze swojej rzeczywistości.",
-                    PosterUrl = "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-                    Genre = "Sci-Fi",
-                    Rating = 8.7 
-                },
-                new Movie 
-                {
-                    Title = "Skazani na Shawshank",
-                    Director = "Frank Darabont", 
-                    Year = 1994,
-                    Description = "Dwóch więźniów nawiązuje więź, znajdując pocieszenie i ostateczne odkupienie przez aktów wspólnej łaski.",
-                    PosterUrl = "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
-                    Genre = "Dramat",
-                    Rating = 9.3 
-                }
-            };
+            _allMovies = new ObservableCollection<Movie>(_movieService.GetAllMovies());
+            FilterMovies();
 
-            foreach (var movie in sampleMovies)
+            if (!_allMovies.Any())
+            {
+                MessageBox.Show("Brak filmów w bazie danych. Dodaj filmy do pliku Data/movies.json");
+            }
+        }
+
+        private void FilterMovies()
+        {
+            Movies.Clear();
+            var filtered = string.IsNullOrWhiteSpace(SearchQuery)
+                ? _allMovies
+                : _allMovies.Where(m => m.Title.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase));
+
+            foreach (var movie in filtered)
             {
                 Movies.Add(movie);
             }

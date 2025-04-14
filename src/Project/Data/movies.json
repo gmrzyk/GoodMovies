@@ -1,0 +1,290 @@
+[
+  {
+    "Title": "Incepcja",
+    "Director": "Christopher Nolan",
+    "Year": 2010,
+    "Description": "Złodziej, który potrafi wykradać sekrety z podświadomości podczas snu.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.8
+  },
+  {
+    "Title": "Matrix",
+    "Director": "Lana i Lilly Wachowski",
+    "Year": 1999,
+    "Description": "Haker komputerowy dowiaduje się od tajemniczych rebeliantów o prawdziwej naturze swojej rzeczywistości.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.7
+  },
+  {
+    "Title": "Skazani na Shawshank",
+    "Director": "Frank Darabont",
+    "Year": 1994,
+    "Description": "Dwóch więźniów nawiązuje więź, znajdując pocieszenie i ostateczne odkupienie przez aktów wspólnej łaski.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 9.3
+  },
+  {
+    "Title": "Zielona Mila",
+    "Director": "Frank Darabont",
+    "Year": 1999,
+    "Description": "Historia życia strażników więziennych na bloku śmierci, którzy odkrywają niezwykły dar jednego z więźniów.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.6
+  },
+  {
+    "Title": "Forrest Gump",
+    "Director": "Robert Zemeckis",
+    "Year": 1994,
+    "Description": "Historia życia Forresta Gumpa, człowieka o niskim IQ, który przypadkowo staje się świadkiem ważnych wydarzeń w historii USA.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.8
+  },
+  {
+    "Title": "Lista Schindlera",
+    "Director": "Steven Spielberg",
+    "Year": 1993,
+    "Description": "Historia niemieckiego przedsiębiorcy, który ratuje żydowskich pracowników przed Holocaustem.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat historyczny",
+    "Rating": 9.0
+  },
+  {
+    "Title": "Pulp Fiction",
+    "Director": "Quentin Tarantino",
+    "Year": 1994,
+    "Description": "Przemoc i odkupienie w opowieści o dwóch płatnych zabójcach, bokserze, żonie gangu i parze rabusiów.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Kryminał",
+    "Rating": 8.9
+  },
+  {
+    "Title": "Władca Pierścieni: Powrót Króla",
+    "Director": "Peter Jackson",
+    "Year": 2003,
+    "Description": "Frodo i Sam zbliżają się do Góry Przeznaczenia, podczas gdy reszta drużyny przygotowuje się do ostatecznej bitwy o Śródziemie.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Fantasy",
+    "Rating": 9.0
+  },
+  {
+    "Title": "Nietykalni",
+    "Director": "Olivier Nakache, Éric Toledano",
+    "Year": 2011,
+    "Description": "Po wypadku paralityk zatrudnia do opieki młodego mężczyznę z przedmieść, który właśnie wyszedł z więzienia.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Komedia dramatyczna",
+    "Rating": 8.5
+  },
+  {
+    "Title": "Gladiator",
+    "Director": "Ridley Scott",
+    "Year": 2000,
+    "Description": "Zdradzony generał rzymski zostaje niewolnikiem i gladiatorem, który pragnie zemsty na cesarzu.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat historyczny",
+    "Rating": 8.5
+  },
+  {
+    "Title": "Django",
+    "Director": "Quentin Tarantino",
+    "Year": 2012,
+    "Description": "Niewolnik Django zawiera umowę z łowcą nagród, aby odzyskać swoją żonę z rąk okrutnego plantatora.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Western",
+    "Rating": 8.4
+  },
+  {
+    "Title": "Interstellar",
+    "Director": "Christopher Nolan",
+    "Year": 2014,
+    "Description": "Grupa odkrywców wykorzystuje nowo odkryty tunel czasoprzestrzenny, aby pokonać ograniczenia lotów kosmicznych.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.6
+  },
+  {
+    "Title": "Fight Club",
+    "Director": "David Fincher",
+    "Year": 1999,
+    "Description": "Niezadowolony z życia mężczyzna zakłada podziemny klub walki, który przeradza się w coś znacznie większego.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.8
+  },
+  {
+    "Title": "Milczenie owiec",
+    "Director": "Jonathan Demme",
+    "Year": 1991,
+    "Description": "Młoda agentka FBI konsultuje się z uwięzionym kanibalistycznym zabójcą, aby schwytać innego seryjnego mordercę.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Thriller",
+    "Rating": 8.6
+  },
+  {
+    "Title": "Siedem",
+    "Director": "David Fincher",
+    "Year": 1995,
+    "Description": "Dwóch detektywów ściga seryjnego mordercę, który wybiera swoje ofiary według siedmiu grzechów głównych.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Thriller",
+    "Rating": 8.6
+  },
+  {
+    "Title": "Leon Zawodowiec",
+    "Director": "Luc Besson",
+    "Year": 1994,
+    "Description": "Profesjonalny zabójca bierze pod opiekę 12-letnią dziewczynkę po tym, jak jej rodzina zostaje zamordowana.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BODllNWE0MmEtYjUwZi00ZjY3LThmNmQtZjZlMjI2YTZjYmQ0XkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Kryminał",
+    "Rating": 8.5
+  },
+  {
+    "Title": "Gran Torino",
+    "Director": "Clint Eastwood",
+    "Year": 2008,
+    "Description": "Sarkastyczny weteran wojenny zaprzyjaźnia się z młodym sąsiadem z Azji i postanawia go chronić przed gangiem.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTc5NTk2OTU1Nl5BMl5BanBnXkFtZTcwMDc3NjAwMg@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.1
+  },
+  {
+    "Title": "Whiplash",
+    "Director": "Damien Chazelle",
+    "Year": 2014,
+    "Description": "Młody perkusista stara się osiągnąć doskonałość pod okiem bezwzględnego nauczyciela.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.5
+  },
+  {
+    "Title": "Joker",
+    "Director": "Todd Phillips",
+    "Year": 2019,
+    "Description": "Historia transformacji zaniedbanego komika w psychopatycznego przestępcę, który staje się ikoną chaosu w Gotham City.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.4
+  },
+  {
+    "Title": "Avengers: Wojna bez granic",
+    "Director": "Anthony Russo, Joe Russo",
+    "Year": 2018,
+    "Description": "Avengerzy i ich sojusznicy muszą być gotowi poświęcić wszystko, aby pokonać potężnego Thanosa.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 8.4
+  },
+  {
+    "Title": "Czarna Pantera",
+    "Director": "Ryan Coogler",
+    "Year": 2018,
+    "Description": "T'Challa, król Wakandy, wraca do domu by objąć tron, ale musi stawić czoła dawnemu wrogowi.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 7.3
+  },
+  {
+    "Title": "Parasite",
+    "Director": "Bong Joon Ho",
+    "Year": 2019,
+    "Description": "Biedna rodzina podstępem infiltruje dom zamożnej rodziny, co prowadzi do nieoczekiwanych konsekwencji.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Thriller",
+    "Rating": 8.6
+  },
+  {
+    "Title": "Green Book",
+    "Director": "Peter Farrelly",
+    "Year": 2018,
+    "Description": "Włosko-amerykański ochroniarz zostaje zatrudniony do ochrony czarnoskórego pianisty jazzowego podczas jego trasy koncertowej w latach 60.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.2
+  },
+  {
+    "Title": "Bohemian Rhapsody",
+    "Director": "Bryan Singer",
+    "Year": 2018,
+    "Description": "Historia zespołu Queen, skupiająca się na ich wokaliscie Freddiem Mercurym i ich drodze do sukcesu.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Biograficzny",
+    "Rating": 7.9
+  },
+  {
+    "Title": "La La Land",
+    "Director": "Damien Chazelle",
+    "Year": 2016,
+    "Description": "Pianista jazzowy i aktorka spotykają się i zakochują w Los Angeles, ale ich marzenia zagrażają ich związkowi.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Musical",
+    "Rating": 8.0
+  },
+  {
+    "Title": "The Revenant",
+    "Director": "Alejandro G. Iñárritu",
+    "Year": 2015,
+    "Description": "Łowca futer zostaje ciężko ranny przez niedźwiedzia i porzucony przez swoją drużynę. Walczy o przetrwanie i zemstę.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.0
+  },
+  {
+    "Title": "Mad Max: Na drodze gniewu",
+    "Director": "George Miller",
+    "Year": 2015,
+    "Description": "W postapokaliptycznej przyszłości Max łączy siły z buntowniczką Furiosą, aby uciec przed tyranem Immortanem Joem.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 8.1
+  },
+  {
+    "Title": "Birdman",
+    "Director": "Alejandro G. Iñárritu",
+    "Year": 2014,
+    "Description": "Była gwiazda filmów superbohaterskich próbuje odnieść sukces na Broadwayu, walcząc z własnym ego i rzeczywistością.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 7.7
+  },
+  {
+    "Title": "Gravity",
+    "Director": "Alfonso Cuarón",
+    "Year": 2013,
+    "Description": "Dwoje astronautów zostaje odciętych od promu kosmicznego po zniszczeniu ich stacji przez kosmiczne śmieci.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 7.7
+  },
+  {
+    "Title": "Drive",
+    "Director": "Nicolas Winding Refn",
+    "Year": 2011,
+    "Description": "Kaskader filmowy pracujący jako kierowca dla przestępców zakochuje się w sąsiadce, której mąż wychodzi z więzienia.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BZjY5ZjQyMjMtMmEwOC00Nzc2LTllYTItMmU2MzJjNTg1NjY0XkEyXkFqcGdeQXVyNjQ1MTMzMDQ@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Kryminał",
+    "Rating": 7.8
+  },
+  {
+    "Title": "Incepcja",
+    "Director": "Christopher Nolan",
+    "Year": 2010,
+    "Description": "Złodziej, który potrafi wykradać sekrety z podświadomości podczas snu, otrzymuje zadanie wszczepienia myśli do umysłu osoby.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.8
+  },
+  {
+    "Title": "The Dark Knight",
+    "Director": "Christopher Nolan",
+    "Year": 2008,
+    "Description": "Batman, wraz z pomocą porucznika Gordona i prokuratora Harveya Denta, występuje przeciwko przerażającemu Jokerowi.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 9.0
+  }
+]

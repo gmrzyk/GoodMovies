@@ -5,72 +5,94 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1000">
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <ItemsControl ItemsSource="{Binding Movies}" Margin="20">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Border BorderBrush="#BDC3C7" BorderThickness="0 0 0 1" Padding="0 10" Margin="0 0 0 10">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="150"/>
-                            </Grid.ColumnDefinitions>
-                            
-                            <Image Grid.Column="0" 
-                                   Source="{Binding PosterUrl}" 
-                                   Height="200" 
-                                   Width="150" 
-                                   Stretch="UniformToFill"
-                                   Cursor="Hand"
-                                   MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
-                            
-                            <StackPanel Grid.Column="1" Margin="10 0">
-                                <TextBlock Text="{Binding Title}" 
-                                           FontSize="18" 
-                                           FontWeight="Bold"
-                                           Cursor="Hand"
-                                           MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
-                                <TextBlock Text="{Binding Director}" 
-                                           FontSize="14" 
-                                           Foreground="#7F8C8D"/>
-                                <TextBlock Text="{Binding Year}" 
-                                           FontSize="14" 
-                                           Foreground="#7F8C8D"/>
-                                <TextBlock Text="{Binding Genre}" 
-                                           FontSize="14" 
-                                           Foreground="#7F8C8D"/>
-                                <TextBlock Text="{Binding Rating, StringFormat={}{0}/10}" 
-                                           FontSize="14" 
-                                           Foreground="#7F8C8D"/>
-                                <TextBlock Text="{Binding Description}" 
-                                           FontSize="14" 
-                                           TextWrapping="Wrap" 
-                                           Margin="0 10 0 0"/>
-                            </StackPanel>
-                            
-                            <StackPanel Grid.Column="2" VerticalAlignment="Center">
-                                <Button Content="❤️ Dodaj do ulubionych" 
-                                        Command="{Binding DataContext.AddToFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                        CommandParameter="{Binding}"
-                                        Style="{StaticResource ActionButtonStyle}"
-                                        Margin="0 0 0 10"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20 10">
+            <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
+                     Width="300"
+                     Padding="5"
+                     Style="{StaticResource SearchTextBoxStyle}"
+                     Tag="Wyszukaj film..."/>
+        </StackPanel>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Movies}" Margin="20">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#BDC3C7" BorderThickness="0 0 0 1" Padding="0 10" Margin="0 0 0 10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="150"/>
+                                </Grid.ColumnDefinitions>
                                 
-                                <Button Content="✔️ Obejrzane" 
-                                        Command="{Binding DataContext.AddToWatchedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                        CommandParameter="{Binding}"
-                                        Style="{StaticResource ActionButtonStyle}"
-                                        Margin="0 0 0 10"/>
+                                <Image Source="{Binding PosterUrl}" 
+                                       Height="200" 
+                                       Width="150" 
+                                       Stretch="UniformToFill"
+                                       Cursor="Hand"
+                                       MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
                                 
-                                <Button Content="➕ Do obejrzenia" 
-                                        Command="{Binding DataContext.AddToWatchListCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                        CommandParameter="{Binding}"
-                                        Style="{StaticResource ActionButtonStyle}"/>
-                            </StackPanel>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-    </ScrollViewer>
+                                <StackPanel Grid.Column="1" Margin="10 0">
+                                    <TextBlock Text="{Binding Title}" 
+                                               FontSize="18" 
+                                               FontWeight="Bold"
+                                               Cursor="Hand"
+                                               MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+                                    <TextBlock Text="{Binding Director}" 
+                                               FontSize="14" 
+                                               Foreground="#7F8C8D"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                                        <TextBlock Text="{Binding Year}" 
+                                                   FontSize="14" 
+                                                   Foreground="#7F8C8D"/>
+                                        <TextBlock Text=" • " 
+                                                   FontSize="14" 
+                                                   Foreground="#7F8C8D"/>
+                                        <TextBlock Text="{Binding Genre}" 
+                                                   FontSize="14" 
+                                                   Foreground="#7F8C8D"/>
+                                        <TextBlock Text=" • " 
+                                                   FontSize="14" 
+                                                   Foreground="#7F8C8D"/>
+                                        <TextBlock Text="{Binding Rating, StringFormat={}{0}/10}" 
+                                                   FontSize="14" 
+                                                   Foreground="#7F8C8D"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding Description}" 
+                                               FontSize="14" 
+                                               TextWrapping="Wrap" 
+                                               Margin="0 10 0 0"/>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                                    <Button Content="❤️ Dodaj do ulubionych" 
+                                            Command="{Binding DataContext.AddToFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource ActionButtonStyle}"
+                                            Margin="0 0 0 10"/>
+                                    
+                                    <Button Content="✔️ Obejrzane" 
+                                            Command="{Binding DataContext.AddToWatchedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource ActionButtonStyle}"
+                                            Margin="0 0 0 10"/>
+                                    
+                                    <Button Content="➕ Do obejrzenia" 
+                                            Command="{Binding DataContext.AddToWatchListCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource ActionButtonStyle}"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
 </UserControl>

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using Project.Models;
@@ -11,9 +13,27 @@ namespace Project.ViewModels
     {
         private readonly MovieService _movieService;
         private readonly NavigationService _navigationService;
-        
+        private string _searchQuery;
+        private ObservableCollection<UserMovie> _allMovies = new ObservableCollection<UserMovie>();
+        private string _title;
+
         public ObservableCollection<UserMovie> Movies { get; } = new ObservableCollection<UserMovie>();
-        public string Title { get; private set; }
+        
+        public string Title
+        {
+            get => _title;
+            private set => SetField(ref _title, value);
+        }
+        
+        public string SearchQuery
+        {
+            get => _searchQuery;
+            set
+            {
+                SetField(ref _searchQuery, value);
+                FilterMovies();
+            }
+        }
 
         public ICommand NavigateBackCommand { get; }
         public ICommand MoveToWatchedCommand { get; }
@@ -41,23 +61,28 @@ namespace Project.ViewModels
             {
                 case "Favorites":
                     Title = "Ulubione filmy";
-                    LoadMovies(_movieService.GetFavorites());
+                    _allMovies = new ObservableCollection<UserMovie>(_movieService.GetFavorites());
                     break;
                 case "Watched":
                     Title = "Obejrzane filmy";
-                    LoadMovies(_movieService.GetWatched());
+                    _allMovies = new ObservableCollection<UserMovie>(_movieService.GetWatched());
                     break;
                 case "ToWatch":
                     Title = "Do obejrzenia";
-                    LoadMovies(_movieService.GetWatchList());
+                    _allMovies = new ObservableCollection<UserMovie>(_movieService.GetWatchList());
                     break;
             }
+            FilterMovies();
         }
 
-        private void LoadMovies(IEnumerable<UserMovie> movies)
+        private void FilterMovies()
         {
             Movies.Clear();
-            foreach (var movie in movies)
+            var filtered = string.IsNullOrWhiteSpace(SearchQuery)
+                ? _allMovies
+                : _allMovies.Where(m => m.Title.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase));
+
+            foreach (var movie in filtered)
             {
                 Movies.Add(movie);
             }
@@ -71,7 +96,8 @@ namespace Project.ViewModels
         private void MoveToWatched(UserMovie movie)
         {
             _movieService.MoveToWatched(movie);
-            Movies.Remove(movie);
+            _allMovies.Remove(movie);
+            FilterMovies();
             MessageBox.Show($"Przeniesiono {movie.Title} do obejrzanych!");
         }
 
@@ -84,14 +110,16 @@ namespace Project.ViewModels
         private void RemoveFromWatched(UserMovie movie)
         {
             _movieService.RemoveFromWatched(movie);
-            Movies.Remove(movie);
+            _allMovies.Remove(movie);
+            FilterMovies();
             MessageBox.Show($"Usunięto {movie.Title} z obejrzanych!");
         }
 
         private void RemoveFromFavorites(UserMovie movie)
         {
             _movieService.RemoveFromFavorites(movie);
-            Movies.Remove(movie);
+            _allMovies.Remove(movie);
+            FilterMovies();
             MessageBox.Show($"Usunięto {movie.Title} z ulubionych!");
         }
 

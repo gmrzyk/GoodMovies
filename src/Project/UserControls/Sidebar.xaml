@@ -33,11 +33,6 @@
                     Command="{Binding NavigateToCollectionCommand}"
                     CommandParameter="ToWatch"
                     Style="{StaticResource SidebarButtonStyle}"/>
-            
-            <Button Content="📊 Statystyki" 
-                    Command="{Binding NavigateToCollectionCommand}"
-                    CommandParameter="Statistics"
-                    Style="{StaticResource SidebarButtonStyle}"/>
         </StackPanel>
     </Border>
 </UserControl>

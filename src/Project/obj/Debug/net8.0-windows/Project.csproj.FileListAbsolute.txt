@@ -24,8 +24,6 @@ E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Project.genruntimeconf
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\ref\Project.dll
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\MovieCollectionView.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\MovieCollectionView.g.cs
-E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\StatisticsView.g.cs
-E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\StatisticsView.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\UserControls\Sidebar.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\UserControls\Sidebar.g.cs
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
@@ -69,3 +67,4 @@ E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Project.csproj.Assembl
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\App.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Views\Styles.baml
 E:\GitHub\GoodMovies\src\Project\obj\Debug\net8.0-windows\Project.csproj.CopyComplete
+E:\GitHub\GoodMovies\src\Project\bin\Debug\net8.0-windows\Newtonsoft.Json.dll

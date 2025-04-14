@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System.Windows;
 using Project.Services;
 using Project.ViewModels;
+using System.Windows;
 
 namespace Project
 {
@@ -13,9 +13,14 @@ namespace Project
         {
             base.OnStartup(e);
 
-            var services = new ServiceCollection();
-            ConfigureServices(services);
-            ServiceProvider = services.BuildServiceProvider();
+            var resources = new ResourceDictionary();
+            resources.Add("StringToVisibilityConverter", new Converters.StringToVisibilityConverter());
+            resources.Add("BooleanToVisibilityConverter", new Converters.BooleanToVisibilityConverter());
+            Resources.MergedDictionaries.Add(resources);
+
+            var serviceCollection = new ServiceCollection();
+            ConfigureServices(serviceCollection);
+            ServiceProvider = serviceCollection.BuildServiceProvider();
 
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
@@ -23,6 +28,7 @@ namespace Project
 
         private void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<JsonDataService>();
             services.AddSingleton<MovieService>();
             services.AddSingleton<NavigationService>();
             
@@ -30,8 +36,7 @@ namespace Project
             services.AddTransient<MovieListViewModel>();
             services.AddTransient<MovieCollectionViewModel>();
             services.AddTransient<MovieDetailsViewModel>();
-            services.AddTransient<StatisticsViewModel>();
-            
+
             services.AddSingleton<MainWindow>();
         }
     }

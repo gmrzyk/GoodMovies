@@ -6,67 +6,93 @@ namespace Project.Services
 {
     public class MovieService
     {
-        private readonly List<UserMovie> _favorites = new();
-        private readonly List<UserMovie> _watched = new();
-        private readonly List<UserMovie> _toWatch = new();
+        private readonly JsonDataService _jsonDataService;
+        private List<UserMovie> _userMovies;
+
+        public MovieService(JsonDataService jsonDataService)
+        {
+            _jsonDataService = jsonDataService;
+            _userMovies = _jsonDataService.LoadUserMovies();
+        }
 
         public void AddToFavorites(Movie movie)
         {
-            if (!_favorites.Any(m => m.Title == movie.Title))
+            var userMovie = _userMovies.FirstOrDefault(m => m.Title == movie.Title);
+            if (userMovie == null)
             {
-                _favorites.Add(new UserMovie(movie) { IsFavorite = true });
+                userMovie = new UserMovie(movie);
+                _userMovies.Add(userMovie);
             }
+            userMovie.IsFavorite = true;
+            SaveChanges();
         }
 
         public void AddToWatched(Movie movie)
         {
-            if (!_watched.Any(m => m.Title == movie.Title))
+            var userMovie = _userMovies.FirstOrDefault(m => m.Title == movie.Title);
+            if (userMovie == null)
             {
-                _watched.Add(new UserMovie(movie) { IsWatched = true });
+                userMovie = new UserMovie(movie);
+                _userMovies.Add(userMovie);
             }
+            userMovie.IsWatched = true;
+            SaveChanges();
         }
 
         public void AddToWatchList(Movie movie)
         {
-            if (!_toWatch.Any(m => m.Title == movie.Title))
+            var userMovie = _userMovies.FirstOrDefault(m => m.Title == movie.Title);
+            if (userMovie == null)
             {
-                _toWatch.Add(new UserMovie(movie) { ToWatch = true });
+                userMovie = new UserMovie(movie);
+                _userMovies.Add(userMovie);
             }
+            userMovie.ToWatch = true;
+            SaveChanges();
         }
 
-        public List<UserMovie> GetFavorites() => _favorites;
-        public List<UserMovie> GetWatched() => _watched;
-        public List<UserMovie> GetWatchList() => _toWatch;
+        public List<UserMovie> GetFavorites() => 
+            _userMovies.Where(m => m.IsFavorite).ToList();
+
+        public List<UserMovie> GetWatched() => 
+            _userMovies.Where(m => m.IsWatched).ToList();
+
+        public List<UserMovie> GetWatchList() => 
+            _userMovies.Where(m => m.ToWatch).ToList();
 
         public void MoveToWatched(UserMovie movie)
         {
-            if (!_watched.Contains(movie))
-            {
-                _watched.Add(movie);
-            }
             movie.IsWatched = true;
             movie.ToWatch = false;
-            movie.IsFavorite = false;
-            _toWatch.Remove(movie);
-            _favorites.Remove(movie);
+            SaveChanges();
         }
 
         public void RemoveFromFavorites(UserMovie movie)
         {
-            _favorites.Remove(movie);
             movie.IsFavorite = false;
+            SaveChanges();
         }
 
         public void RemoveFromWatched(UserMovie movie)
         {
-            _watched.Remove(movie);
             movie.IsWatched = false;
+            SaveChanges();
         }
 
         public void RemoveFromWatchList(UserMovie movie)
         {
-            _toWatch.Remove(movie);
             movie.ToWatch = false;
+            SaveChanges();
+        }
+
+        private void SaveChanges()
+        {
+            _jsonDataService.SaveUserMovies(_userMovies);
+        }
+
+        public List<Movie> GetAllMovies()
+        {
+            return _jsonDataService.LoadMovies();
         }
     }
 }

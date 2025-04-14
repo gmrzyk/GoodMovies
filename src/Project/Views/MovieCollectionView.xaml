@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Project.Views"
              xmlns:converters="clr-namespace:Project.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1000">
@@ -14,6 +13,7 @@
     
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
@@ -30,7 +30,15 @@
                        VerticalAlignment="Center"/>
         </StackPanel>
         
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20 10">
+            <TextBox Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}"
+                     Width="300"
+                     Padding="5"
+                     Style="{StaticResource SearchTextBoxStyle}"
+                     Tag="Wyszukaj w kolekcji..."/>
+        </StackPanel>
+        
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <ItemsControl ItemsSource="{Binding Movies}" Margin="20 0 20 20">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>

@@ -29,9 +29,6 @@
                 <DataTemplate DataType="{x:Type viewModels:MovieDetailsViewModel}">
                     <views:MovieDetailsView/>
                 </DataTemplate>
-                <DataTemplate DataType="{x:Type viewModels:StatisticsViewModel}">
-                    <views:StatisticsView/>
-                </DataTemplate>
             </ContentControl.Resources>
         </ContentControl>
     </Grid>
