@@ -1,7 +1,7 @@
 [
   {
-    "IsFavorite": true,
-    "IsWatched": false,
+    "IsFavorite": false,
+    "IsWatched": true,
     "ToWatch": false,
     "Title": "Incepcja",
     "Director": "Christopher Nolan",
@@ -14,7 +14,7 @@
   {
     "IsFavorite": false,
     "IsWatched": false,
-    "ToWatch": true,
+    "ToWatch": false,
     "Title": "Matrix",
     "Director": "Lana i Lilly Wachowski",
     "Year": 1999,
@@ -49,7 +49,7 @@
   },
   {
     "IsFavorite": false,
-    "IsWatched": true,
+    "IsWatched": false,
     "ToWatch": false,
     "Title": "Whiplash",
     "Director": "Damien Chazelle",
@@ -73,7 +73,7 @@
   },
   {
     "IsFavorite": false,
-    "IsWatched": true,
+    "IsWatched": false,
     "ToWatch": false,
     "Title": "Czarna Pantera",
     "Director": "Ryan Coogler",
@@ -84,8 +84,8 @@
     "Rating": 7.3
   },
   {
-    "IsFavorite": true,
-    "IsWatched": true,
+    "IsFavorite": false,
+    "IsWatched": false,
     "ToWatch": false,
     "Title": "Bohemian Rhapsody",
     "Director": "Bryan Singer",
@@ -97,8 +97,8 @@
   },
   {
     "IsFavorite": false,
-    "IsWatched": false,
-    "ToWatch": true,
+    "IsWatched": true,
+    "ToWatch": false,
     "Title": "Mad Max: Na drodze gniewu",
     "Director": "George Miller",
     "Year": 2015,
@@ -108,7 +108,7 @@
     "Rating": 8.1
   },
   {
-    "IsFavorite": true,
+    "IsFavorite": false,
     "IsWatched": false,
     "ToWatch": false,
     "Title": "Gravity",
@@ -118,5 +118,89 @@
     "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_FMjpg_UX1000_.jpg",
     "Genre": "Sci-Fi",
     "Rating": 7.7
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": false,
+    "ToWatch": false,
+    "Title": "Zielona Mila",
+    "Director": "Frank Darabont",
+    "Year": 1999,
+    "Description": "Historia życia strażników więziennych na bloku śmierci, którzy odkrywają niezwykły dar jednego z więźniów.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.6
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": false,
+    "ToWatch": false,
+    "Title": "Gladiator",
+    "Director": "Ridley Scott",
+    "Year": 2000,
+    "Description": "Zdradzony generał rzymski zostaje niewolnikiem i gladiatorem, który pragnie zemsty na cesarzu.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat historyczny",
+    "Rating": 8.5
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": false,
+    "ToWatch": false,
+    "Title": "Interstellar",
+    "Director": "Christopher Nolan",
+    "Year": 2014,
+    "Description": "Grupa odkrywców wykorzystuje nowo odkryty tunel czasoprzestrzenny, aby pokonać ograniczenia lotów kosmicznych.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.6
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": true,
+    "ToWatch": false,
+    "Title": "The Dark Knight",
+    "Director": "Christopher Nolan",
+    "Year": 2008,
+    "Description": "Batman, wraz z pomocą porucznika Gordona i prokuratora Harveya Denta, występuje przeciwko przerażającemu Jokerowi.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Akcja",
+    "Rating": 9.0
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": true,
+    "ToWatch": false,
+    "Title": "Drive",
+    "Director": "Nicolas Winding Refn",
+    "Year": 2011,
+    "Description": "Kaskader filmowy pracujący jako kierowca dla przestępców zakochuje się w sąsiadce, której mąż wychodzi z więzienia.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BZjY5ZjQyMjMtMmEwOC00Nzc2LTllYTItMmU2MzJjNTg1NjY0XkEyXkFqcGdeQXVyNjQ1MTMzMDQ@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Kryminał",
+    "Rating": 7.8
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": false,
+    "ToWatch": true,
+    "Title": "Birdman",
+    "Director": "Alejandro G. Iñárritu",
+    "Year": 2014,
+    "Description": "Była gwiazda filmów superbohaterskich próbuje odnieść sukces na Broadwayu, walcząc z własnym ego i rzeczywistością.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BODAzNDMxMzAxOV5BMl5BanBnXkFtZTgwMDMxMjA4MjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 7.7
+  },
+  {
+    "IsFavorite": false,
+    "IsWatched": false,
+    "ToWatch": false,
+    "Title": "Lista Schindlera",
+    "Director": "Steven Spielberg",
+    "Year": 1993,
+    "Description": "Historia niemieckiego przedsiębiorcy, który ratuje żydowskich pracowników przed Holocaustem.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat historyczny",
+    "Rating": 9.0
   }
 ]

@@ -9,6 +9,7 @@
     
     <UserControl.Resources>
         <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:CollectionTypeToVisibilityConverter x:Key="CollectionTypeToVisibilityConverter"/>
     </UserControl.Resources>
     
     <Grid>
@@ -90,32 +91,49 @@
                                 </StackPanel>
                                 
                                 <StackPanel Grid.Column="2" VerticalAlignment="Center">
-                                    <Button Content="Usuń z ulubionych" 
-                                            Command="{Binding DataContext.RemoveFromFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                    <!-- Przyciski dla "Do obejrzenia" -->
+                                    <Button Content="Dodaj do obejrzanych" 
+                                            Command="{Binding DataContext.MoveToWatchedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource ActionButtonStyle}"
                                             Margin="0 0 0 10"
-                                            Visibility="{Binding IsFavorite, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    
+                                            Visibility="{Binding DataContext.CollectionType, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource CollectionTypeToVisibilityConverter}, ConverterParameter=ToWatch}"/>
+                                            
                                     <Button Content="Dodaj do ulubionych"
                                             Command="{Binding DataContext.AddToFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource ActionButtonStyle}"
                                             Margin="0 0 0 10"
-                                            Visibility="{Binding IsWatched, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    
+                                            Visibility="{Binding DataContext.CollectionType, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource CollectionTypeToVisibilityConverter}, ConverterParameter=ToWatch}"/>
+                                            
+                                    <Button Content="Usuń z listy"
+                                            Command="{Binding DataContext.RemoveFromWatchListCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource ActionButtonStyle}"
+                                            Margin="0 0 0 10"
+                                            Visibility="{Binding DataContext.CollectionType, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource CollectionTypeToVisibilityConverter}, ConverterParameter=ToWatch}"/>
+
+                                    <!-- Przyciski dla "Obejrzane" -->
                                     <Button Content="Usuń z obejrzanych" 
                                             Command="{Binding DataContext.RemoveFromWatchedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource ActionButtonStyle}"
                                             Margin="0 0 0 10"
-                                            Visibility="{Binding IsWatched, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                                    
-                                    <Button Content="Oznacz jako obejrzane" 
-                                            Command="{Binding DataContext.MoveToWatchedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            Visibility="{Binding DataContext.CollectionType, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource CollectionTypeToVisibilityConverter}, ConverterParameter=Watched}"/>
+                                            
+                                    <Button Content="Dodaj do ulubionych"
+                                            Command="{Binding DataContext.AddToFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                                             CommandParameter="{Binding}"
                                             Style="{StaticResource ActionButtonStyle}"
-                                            Visibility="{Binding ToWatch, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                            Margin="0 0 0 10"
+                                            Visibility="{Binding DataContext.CollectionType, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource CollectionTypeToVisibilityConverter}, ConverterParameter=Watched}"/>
+
+                                    <!-- Przyciski dla "Ulubione" -->
+                                    <Button Content="Usuń z ulubionych" 
+                                            Command="{Binding DataContext.RemoveFromFavoritesCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                            CommandParameter="{Binding}"
+                                            Style="{StaticResource ActionButtonStyle}"
+                                            Visibility="{Binding DataContext.CollectionType, RelativeSource={RelativeSource AncestorType=ItemsControl}, Converter={StaticResource CollectionTypeToVisibilityConverter}, ConverterParameter=Favorites}"/>
                                 </StackPanel>
                             </Grid>
                         </Border>

@@ -270,15 +270,6 @@
     "Rating": 7.8
   },
   {
-    "Title": "Incepcja",
-    "Director": "Christopher Nolan",
-    "Year": 2010,
-    "Description": "Złodziej, który potrafi wykradać sekrety z podświadomości podczas snu, otrzymuje zadanie wszczepienia myśli do umysłu osoby.",
-    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg",
-    "Genre": "Sci-Fi",
-    "Rating": 8.8
-  },
-  {
     "Title": "The Dark Knight",
     "Director": "Christopher Nolan",
     "Year": 2008,
@@ -286,5 +277,167 @@
     "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX1000_.jpg",
     "Genre": "Akcja",
     "Rating": 9.0
+  },
+  {
+    "Title": "The Social Network",
+    "Director": "David Fincher",
+    "Year": 2010,
+    "Description": "Historia powstania Facebooka i konfliktu pomiędzy jego współzałożycielami.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOGUyZDUxZjEtMmIzMC00MzlmLTg4MGItZWJmMzBhZjE0Mjc1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 7.7
+  },
+  {
+    "Title": "The Grand Budapest Hotel",
+    "Director": "Wes Anderson",
+    "Year": 2014,
+    "Description": "Przygody legendarnego concierge'a słynnego europejskiego hotelu i jego ucznia.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Komedia",
+    "Rating": 8.1
+  },
+  {
+    "Title": "The Wolf of Wall Street",
+    "Director": "Martin Scorsese",
+    "Year": 2013,
+    "Description": "Historia Jordana Belforta, maklera giełdowego, który szybko zdobywa fortunę, ale jego styl życia prowadzi do upadku.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Biograficzny",
+    "Rating": 8.2
+  },
+  {
+    "Title": "Dunkierka",
+    "Director": "Christopher Nolan",
+    "Year": 2017,
+    "Description": "Alianccy żołnierze zostają otoczeni przez wojska niemieckie podczas dramatycznej ewakuacji w Dunkierce.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BN2YyZjQ0NTEtNzU5MS00NGZkLTg0MTEtYzJmMWY3MWRhZjM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Wojenny",
+    "Rating": 7.8
+  },
+  {
+    "Title": "The Shape of Water",
+    "Director": "Guillermo del Toro",
+    "Year": 2017,
+    "Description": "W tajnym laboratorium rządowym w 1962 roku samotna sprzątaczka nawiązuje więź z humanoidalnym stworzeniem.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Fantasy",
+    "Rating": 7.3
+  },
+  {
+    "Title": "Blade Runner 2049",
+    "Director": "Denis Villeneuve",
+    "Year": 2017,
+    "Description": "Młody łowca replikantów odkrywa długo skrywaną tajemnicę, która może pogrążyć resztki społeczeństwa w chaosie.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.0
+  },
+  {
+    "Title": "Arrival",
+    "Director": "Denis Villeneuve",
+    "Year": 2016,
+    "Description": "Lingwistka zostaje zwerbowana przez wojsko do nawiązania kontaktu z przybyszami z kosmosu.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 7.9
+  },
+  {
+    "Title": "The Martian",
+    "Director": "Ridley Scott",
+    "Year": 2015,
+    "Description": "Astronauta zostaje uznany za zmarłego i pozostawiony na Marsie, ale udaje mu się przeżyć i szukać sposobu na powiadomienie Ziemi.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Sci-Fi",
+    "Rating": 8.0
+  },
+  {
+    "Title": "Gone Girl",
+    "Director": "David Fincher",
+    "Year": 2014,
+    "Description": "Mężczyzna staje się głównym podejrzanym w sprawie zaginięcia swojej żony.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Thriller",
+    "Rating": 8.1
+  },
+  {
+    "Title": "Her",
+    "Director": "Spike Jonze",
+    "Year": 2013,
+    "Description": "Samotny pisarz zakochuje się w inteligentnym systemie operacyjnym.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjA1Nzk0OTM2OF5BMl5BanBnXkFtZTgwNjU2NjEwMDE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Romantyczny",
+    "Rating": 8.0
+  },
+  {
+    "Title": "12 Years a Slave",
+    "Director": "Steve McQueen",
+    "Year": 2013,
+    "Description": "Historia Solomona Northupa, wolnego czarnoskórego mężczyzny, który został uprowadzony i sprzedany w niewolę.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat historyczny",
+    "Rating": 8.1
+  },
+  {
+    "Title": "The Imitation Game",
+    "Director": "Morten Tyldum",
+    "Year": 2014,
+    "Description": "Historia Alana Turinga, genialnego matematyka, który pomógł złamać kod Enigmy podczas II wojny światowej.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Biograficzny",
+    "Rating": 8.0
+  },
+  {
+    "Title": "The Theory of Everything",
+    "Director": "James Marsh",
+    "Year": 2014,
+    "Description": "Historia życia Stephena Hawkinga, jego przełomowych odkryć w dziedzinie fizyki i zmagań z chorobą.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Biograficzny",
+    "Rating": 7.7
+  },
+  {
+    "Title": "Spotlight",
+    "Director": "Tom McCarthy",
+    "Year": 2015,
+    "Description": "Zespół dziennikarzy z Boston Globe ujawnia skandal pedofilski w archidiecezji bostońskiej.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjIyOTM5OTIzNV5BMl5BanBnXkFtZTgwMDkzODE2NjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.1
+  },
+  {
+    "Title": "Moonlight",
+    "Director": "Barry Jenkins",
+    "Year": 2016,
+    "Description": "Historia życia młodego Afroamerykanina, który dorasta w trudnej dzielnicy Miami.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 7.4
+  },
+  {
+    "Title": "Three Billboards Outside Ebbing, Missouri",
+    "Director": "Martin McDonagh",
+    "Year": 2017,
+    "Description": "Matka wynajmuje billboardy, by zwrócić uwagę na niesprawiedliwość w śledztwie dotyczącym morderstwa jej córki.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMjI0ODcxNzM1N15BMl5BanBnXkFtZTgwMzIwMTEwNDI@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat",
+    "Rating": 8.1
+  },
+  {
+    "Title": "The Favourite",
+    "Director": "Yorgos Lanthimos",
+    "Year": 2018,
+    "Description": "W XVIII-wiecznej Anglii chora królowa Anna staje się przedmiotem rywalizacji między jej zaufaną przyjaciółką a nową służącą.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BMTg1NzkyODQ3NV5BMl5BanBnXkFtZTgwNDE5MjE5NjE@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Dramat historyczny",
+    "Rating": 7.5
+  },
+  {
+    "Title": "Once Upon a Time in Hollywood",
+    "Director": "Quentin Tarantino",
+    "Year": 2019,
+    "Description": "Aktor i jego dubler próbują odnieść sukces w Hollywood w 1969 roku, w czasie, gdy przemysł filmowy się zmienia.",
+    "PosterUrl": "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg",
+    "Genre": "Komedia dramatyczna",
+    "Rating": 7.6
   }
 ]

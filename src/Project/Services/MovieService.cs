@@ -24,7 +24,8 @@ namespace Project.Services
                 _userMovies.Add(userMovie);
             }
             userMovie.IsFavorite = true;
-            userMovie.IsWatched = true;
+            userMovie.IsWatched = true; // Ulubione muszą być obejrzane
+            userMovie.ToWatch = false; // Usuń z listy "Do obejrzenia"
             SaveChanges();
         }
 
@@ -37,6 +38,7 @@ namespace Project.Services
                 _userMovies.Add(userMovie);
             }
             userMovie.IsWatched = true;
+            userMovie.ToWatch = false; // Usuń z listy "Do obejrzenia"
             SaveChanges();
         }
 
@@ -53,7 +55,7 @@ namespace Project.Services
         }
 
         public List<UserMovie> GetFavorites() => 
-            _userMovies.Where(m => m.IsFavorite && m.IsWatched).ToList();
+            _userMovies.Where(m => m.IsFavorite).ToList();
 
         public List<UserMovie> GetWatched() => 
             _userMovies.Where(m => m.IsWatched).ToList();

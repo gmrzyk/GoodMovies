@@ -5,16 +5,14 @@ using System.Windows.Data;
 
 namespace Project.Converters
 {
-    public class BooleanToVisibilityConverter : IValueConverter
+    public class CollectionTypeToVisibilityConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            bool boolValue = value is bool && (bool)value;
-            bool inverse = parameter as string == "Inverse";
-            
-            if (inverse) boolValue = !boolValue;
-            
-            return boolValue ? Visibility.Visible : Visibility.Collapsed;
+            string currentType = value as string;
+            string expectedType = parameter as string;
+
+            return currentType == expectedType ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -16,6 +16,7 @@ namespace Project.ViewModels
         private string _searchQuery;
         private ObservableCollection<UserMovie> _allMovies = new ObservableCollection<UserMovie>();
         private string _title;
+        private string _collectionType;
 
         public ObservableCollection<UserMovie> Movies { get; } = new ObservableCollection<UserMovie>();
         
@@ -23,6 +24,12 @@ namespace Project.ViewModels
         {
             get => _title;
             private set => SetField(ref _title, value);
+        }
+        
+        public string CollectionType
+        {
+            get => _collectionType;
+            private set => SetField(ref _collectionType, value);
         }
         
         public string SearchQuery
@@ -40,6 +47,7 @@ namespace Project.ViewModels
         public ICommand AddToFavoritesCommand { get; }
         public ICommand RemoveFromWatchedCommand { get; }
         public ICommand RemoveFromFavoritesCommand { get; }
+        public ICommand RemoveFromWatchListCommand { get; }
         public ICommand ShowMovieDetailsCommand { get; }
 
         public MovieCollectionViewModel(MovieService movieService, NavigationService navigationService)
@@ -52,11 +60,14 @@ namespace Project.ViewModels
             AddToFavoritesCommand = new RelayCommand<UserMovie>(AddToFavorites);
             RemoveFromWatchedCommand = new RelayCommand<UserMovie>(RemoveFromWatched);
             RemoveFromFavoritesCommand = new RelayCommand<UserMovie>(RemoveFromFavorites);
+            RemoveFromWatchListCommand = new RelayCommand<UserMovie>(RemoveFromWatchList);
             ShowMovieDetailsCommand = new RelayCommand<UserMovie>(ShowMovieDetails);
         }
 
         public void Initialize(string collectionType)
         {
+            CollectionType = collectionType;
+            
             switch (collectionType)
             {
                 case "Favorites":
@@ -98,15 +109,21 @@ namespace Project.ViewModels
             _movieService.MoveToWatched(movie);
             _allMovies.Remove(movie);
             FilterMovies();
-            MessageBox.Show($"Przeniesiono '{movie.Title}' do obejrzanych!");
+            MessageBox.Show($"Dodano '{movie.Title}' do obejrzanych i usunięto z listy do obejrzenia!");
         }
 
         private void AddToFavorites(UserMovie movie)
         {
             _movieService.AddToFavorites(movie);
-            if (!_allMovies.Contains(movie)) _allMovies.Add(movie);
+            
+            if (CollectionType == "ToWatch")
+            {
+                _movieService.RemoveFromWatchList(movie);
+                _allMovies.Remove(movie);
+            }
+    
             FilterMovies();
-            MessageBox.Show($"Dodano '{movie.Title}' do ulubionych i oznaczono jako obejrzany!");
+            MessageBox.Show($"Dodano '{movie.Title}' do ulubionych!");
         }
 
         private void RemoveFromWatched(UserMovie movie)
@@ -114,7 +131,7 @@ namespace Project.ViewModels
             _movieService.RemoveFromWatched(movie);
             _allMovies.Remove(movie);
             FilterMovies();
-            MessageBox.Show($"Usunięto '{movie.Title}' z obejrzanych (i z ulubionych, jeśli był)!");
+            MessageBox.Show($"Usunięto '{movie.Title}' z obejrzanych!");
         }
 
         private void RemoveFromFavorites(UserMovie movie)
@@ -123,6 +140,14 @@ namespace Project.ViewModels
             _allMovies.Remove(movie);
             FilterMovies();
             MessageBox.Show($"Usunięto '{movie.Title}' z ulubionych!");
+        }
+
+        private void RemoveFromWatchList(UserMovie movie)
+        {
+            _movieService.RemoveFromWatchList(movie);
+            _allMovies.Remove(movie);
+            FilterMovies();
+            MessageBox.Show($"Usunięto '{movie.Title}' z listy do obejrzenia!");
         }
 
         private void ShowMovieDetails(UserMovie movie)

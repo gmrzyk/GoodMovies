@@ -9,7 +9,7 @@
     <ScrollViewer>
         <StackPanel Margin="20" Background="#FFF5F5F5">
             <Border Background="#1A237E" CornerRadius="5" Padding="15" Margin="0,0,0,20">
-                <TextBlock Text="📊 Statystyki Filmowe" 
+                <TextBlock Text="📊 Statystyki Użytkownika" 
                            FontSize="24" 
                            FontWeight="Bold" 
                            Foreground="White"
@@ -42,7 +42,7 @@
             <Border Background="White" CornerRadius="5" Padding="15" Margin="0,0,0,20" 
                     BorderBrush="#E0E0E0" BorderThickness="1">
                 <StackPanel>
-                    <TextBlock Text="🎭 Rozkład gatunków" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="🎭 Gatunki obejrzanych filmów" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
                     <lvc:PieChart Series="{Binding GenreSeries}" LegendLocation="Right" Height="300">
                         <lvc:PieChart.ChartLegend>
                             <lvc:DefaultLegend Foreground="#333"/>
@@ -54,7 +54,7 @@
             <Border Background="White" CornerRadius="5" Padding="15" 
                     BorderBrush="#E0E0E0" BorderThickness="1">
                 <StackPanel>
-                    <TextBlock Text="⭐ Średnia ocena" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="⭐ Średnia ocen obejrzanych filmów" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
                     <ProgressBar Value="{Binding AvgRating, Mode=OneWay}" 
                                 Maximum="10" 
                                 Height="25" 
